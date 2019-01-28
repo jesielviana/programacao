@@ -40,7 +40,7 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // Path is relative to site root
+        icon: `src/images/logo.png`, // Path is relative to site root
       },
     },
 

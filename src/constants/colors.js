@@ -1,0 +1,6 @@
+export const BLACK = '#000'
+export const WHITE = '#FFF'
+export const LIGHT_GRAY = '#EFF0F2'
+export const GRAY = '#8C8D91'
+export const DARK_GRAY = '#47484C'
+export const BORDER = 'rgba(0, 0, 0, 0.1)'

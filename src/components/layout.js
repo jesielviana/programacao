@@ -1,9 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import s from 'styled-components'
 
-import Header from './header'
+import Header from './Header'
 import './layout.css'
+
+const Wrapper = s.div`
+  width: 100%;
+  display: block;
+  display: flex;
+`
+
+const Content = s.div`
+  flex: 1;
+  padding: 0 calc(5% + 1rem);
+`
+
+const ContentSpacer = s.div`
+  min-height: calc(100vh - 60px);
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -17,24 +33,15 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <Wrapper>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          {children}
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
+
+        <Content>
+          <ContentSpacer>
+            {children}
+          </ContentSpacer>
+        </Content>
+      </Wrapper>
     )}
   />
 )
