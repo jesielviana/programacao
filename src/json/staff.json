@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Nihar Patil",
+    "role": "Instructor",
+    "image": {
+      "src": "../images/nihar.jpg"
+    },
+    "email": "niharp@seas.upenn.edu",
+    "officeHours": "Sunday 5-7 PM in MBA Cafe"
+  },
+  {
+    "name": "Cameron Cabo",
+    "role": "Teaching Assistant",
+    "image": {
+      "src": "../images/cameron.jpg"
+    },
+    "email": "ccabo@seas.upenn.edu",
+    "officeHours": "Monday 6-8 PM in MBA Cafe"
+  },
+  {
+    "name": "Taras Bukachevsky",
+    "role": "Teaching Assistant",
+    "image": {
+      "src": "../images/taras.png"
+    },
+    "email": "tarasb@seas.upenn.edu",
+    "officeHours": "Monday 3-5 PM in MBA Cafe"
+  }
+]

@@ -4,3 +4,7 @@ export const LIGHT_GRAY = '#EFF0F2'
 export const GRAY = '#8C8D91'
 export const DARK_GRAY = '#47484C'
 export const BORDER = 'rgba(0, 0, 0, 0.1)'
+
+export const BLUE = '#1f6dc4'
+export const NAVY = '#19508e'
+export const MIDNIGHT = '#0c417c'

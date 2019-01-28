@@ -41,12 +41,21 @@ template {
   display: none;
 }
 a {
+  color: #19508e;
+  text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+}
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #19508e;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  text-decoration: underline;
 }
 abbr[title] {
   border-bottom: none;
