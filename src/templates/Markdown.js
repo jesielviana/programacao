@@ -12,6 +12,7 @@ const Timestamp = s.p`
 
 export default function Template ({
   data, // This prop will be injected by the GraphQL query below.
+  location,
 }) {
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
@@ -19,7 +20,7 @@ export default function Template ({
   const { title, date } = frontmatter
 
   return (
-    <Layout>
+    <Layout location={location}>
       <h1>{title}</h1>
       {date && (<Timestamp>Last updated: {date}</Timestamp>)}
       <div dangerouslySetInnerHTML={{ __html: html }} />

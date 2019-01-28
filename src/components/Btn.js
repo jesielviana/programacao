@@ -12,6 +12,7 @@ const styles = `
   display: inline-block;
   margin-bottom: 1rem;
   text-decoration: none;
+  border-radius: 4px;
 
   &:visited {
     color: ${WHITE};

@@ -41,7 +41,7 @@ export const Staff = () => (
       return (
         <Row margin="1rem">
           {staff.map(s => (
-            <StaffMember {...s} />
+            <StaffMember key={s.name} {...s} />
           ))}
         </Row>
       )

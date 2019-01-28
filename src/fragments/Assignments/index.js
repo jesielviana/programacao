@@ -29,30 +29,34 @@ export const Assignments = () => (
 
       return (
         <table>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Due date</th>
-          </tr>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Due date</th>
+            </tr>
+          </thead>
 
-          {assignments.map((a, idx) => {
-            const {
-              node: {
-                frontmatter: {
-                  title,
-                  path
+          <tbody>
+            {assignments.map((a, idx) => {
+              const {
+                node: {
+                  frontmatter: {
+                    title,
+                    path
+                  }
                 }
-              }
-            } = a
+              } = a
 
-            return (
-              <tr key={path}>
-                <td>{idx + 1}</td>
-                <td><Link to={path}>{title}</Link></td>
-                <td>TODO</td>
-              </tr>
-            )
-          })}
+              return (
+                <tr key={path}>
+                  <td>{idx + 1}</td>
+                  <td><Link to={path}>{title}</Link></td>
+                  <td>TODO</td>
+                </tr>
+              )
+            })}
+          </tbody>
         </table>
       )
     }}

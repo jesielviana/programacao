@@ -6,6 +6,7 @@ import s from 'styled-components'
 import Header from '../components/Header'
 import './layout.css'
 import { BORDER } from '../constants/colors'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 // TODO mobile responsiveness
 
@@ -34,7 +35,7 @@ const Content = s.div`
   }
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -50,6 +51,8 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
 
         <Content>
+          <Breadcrumbs location={location} />
+
           {children}
         </Content>
       </Wrapper>

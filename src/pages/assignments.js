@@ -6,8 +6,8 @@ import { Assignments } from '../fragments'
 
 // TODO SEO across the board
 
-const AssignmentsPage = () => (
-  <Layout>
+const AssignmentsPage = ({ location }) => (
+  <Layout location={location}>
     <SEO title="Assignments" />
     <h1>Assignments</h1>
 
