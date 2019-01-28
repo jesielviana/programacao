@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `CIS 197`,
-    description: `JavaScript web development at the University of Pennsylvania.`, // eslint-disable-line
+    description: `Student-taught 19X course on JavaScript web development at the University of Pennsylvania.`, // eslint-disable-line
     author: `Cameron Cabo <ccabo@seas.upenn.edu>`,
     keywords: [
       'javascript',
@@ -29,6 +29,14 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown`,
+        name: 'markdown',
+      },
+    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
     {

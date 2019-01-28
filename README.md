@@ -1,11 +1,10 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  <a href="https://www.seas.upenn.edu/~cis197/">
+    <img alt="CIS 197" src="https://s3.amazonaws.com/riploventures/cis197.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  CIS 197 Course Website
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
