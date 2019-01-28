@@ -5,6 +5,9 @@ import s from 'styled-components'
 
 import Header from '../components/Header'
 import './layout.css'
+import { BORDER } from '../constants/colors'
+
+// TODO mobile responsiveness
 
 const Wrapper = s.div`
   width: 100%;
@@ -16,6 +19,19 @@ const Content = s.div`
   flex: 1;
   padding: calc(1rem + 2.5%) calc(5% + 1rem);
   min-height: calc(100vh - 60px);
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 80vw;
+
+  hr {
+    background: ${BORDER};
+    height: 3px;
+  }
+
+  pre {
+    max-width: 100%;
+  }
 `
 
 const Layout = ({ children }) => (

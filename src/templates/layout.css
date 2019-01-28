@@ -114,6 +114,8 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  width: 100%;
+  display: block;
 }
 button,
 input,
@@ -405,6 +407,8 @@ pre {
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
+  overflow-y: visible;
+  overflow-x: auto;
 }
 table {
   margin-left: 0;
