@@ -11,7 +11,7 @@ import Footer from './Footer'
 const Nav = s.nav`
   position: fixed;
   width: 20%;
-  padding: 1rem;
+  padding: calc(1rem + 2.5%) 1rem;
   border-right: 1px solid ${BORDER};
   min-height: 100vh;
   overflow-y: auto;

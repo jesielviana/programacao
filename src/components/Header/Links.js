@@ -27,6 +27,11 @@ const styles = `
   :focus,
   :hover {
     color: ${DARK_GRAY};
+
+    ::after {
+      content: "→";
+      float: right;
+    }
   }
 `
 

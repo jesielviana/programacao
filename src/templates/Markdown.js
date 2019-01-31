@@ -7,7 +7,8 @@ import { GRAY } from '../constants/colors'
 
 const Timestamp = s.p`
   color: ${GRAY};
-  margin-bottom: 2.25rem;
+  opacity: 0.8;
+  margin-bottom: calc(2rem + 2.5%);
 `
 
 export default function Template ({

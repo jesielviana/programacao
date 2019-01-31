@@ -19,10 +19,14 @@ This course provides an introduction to modern JavaScript: frameworks, design pa
 
 This course is most useful for students who have some programming and web development experience and want to develop moderate JavaScript skills to be able to build complex, interactive applications.
 
+--------
+
 ### Prerequisites
 
 * CIS 120 or equivalent (or permission of instructor).
 * Some knowledge of HTML/CSS (if you don't meet this requirement, you are expected to pick up the basics on your own with online resources like [Codecademy](http://codecademy.com/) and [Mozilla Developer Network](https://developer.mozilla.org/en-US/)).
+
+--------
 
 ### Policies
 

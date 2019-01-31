@@ -4,10 +4,9 @@ import s from 'styled-components'
 import logo from '../../images/logo.svg'
 
 const Wrapper = s.img`
-  width: 3rem;
+  width: 3.5rem;
   height: auto;
-  margin-top: calc(1rem + 2.5%);
-  margin-bottom: 1.5rem;
+  margin-bottom: 10vh;
 `
 
 export default () => (
