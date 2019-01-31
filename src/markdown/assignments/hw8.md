@@ -1,5 +1,5 @@
 ---
-path: "/assignments/hw8"
+path: "/assignments/8"
 date: "2019-01-29"
 title: "Homework 8: Reddit AMA Chrome Extension"
 ---

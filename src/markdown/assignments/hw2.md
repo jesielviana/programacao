@@ -1,5 +1,5 @@
 ---
-path: "/assignments/hw2"
+path: "/assignments/2"
 date: "2019-01-29"
 title: "Homework 2: Async, Events, and Callbacks"
 ---

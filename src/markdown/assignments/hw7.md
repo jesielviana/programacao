@@ -1,5 +1,5 @@
 ---
-path: "/assignments/hw7"
+path: "/assignments/7"
 date: "2019-01-29"
 title: "Homework 7: Conway's Game of Life"
 ---

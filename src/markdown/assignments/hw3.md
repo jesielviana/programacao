@@ -1,5 +1,5 @@
 ---
-path: "/assignments/hw3"
+path: "/assignments/3"
 date: "2019-01-29"
 title: "Homework 3: Object Oriented JavaScript"
 ---

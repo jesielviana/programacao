@@ -1,5 +1,5 @@
 ---
-path: "/assignments/hw6"
+path: "/assignments/6"
 date: "2019-01-29"
 title: "Homework 6: Piazza Lite Part 2"
 ---
