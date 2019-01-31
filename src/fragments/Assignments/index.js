@@ -1,8 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
-// TOOD add due dates
-
 export const Assignments = () => (
   <StaticQuery
     query={graphql`
@@ -18,6 +16,7 @@ export const Assignments = () => (
               frontmatter {
                 path
                 title
+                due(formatString: "MMMM DD, YYYY")
               }
             }
           }
@@ -43,7 +42,8 @@ export const Assignments = () => (
                 node: {
                   frontmatter: {
                     title,
-                    path
+                    path,
+                    due,
                   }
                 }
               } = a
@@ -52,7 +52,7 @@ export const Assignments = () => (
                 <tr key={path}>
                   <td>{idx + 1}</td>
                   <td><Link to={path}>{title}</Link></td>
-                  <td>TODO</td>
+                  <td>{due ? `${due}, 11:59:59PM` : ''}</td>
                 </tr>
               )
             })}

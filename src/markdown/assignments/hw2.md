@@ -1,6 +1,7 @@
 ---
 path: "/assignments/2"
 date: "2019-01-29"
+due: "2019-02-05"
 title: "Homework 2: Async, Events, and Callbacks"
 ---
 

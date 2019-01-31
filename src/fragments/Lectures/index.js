@@ -3,8 +3,6 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 
 import AdditionalReading from './AdditionalReading'
 
-// TOOD add due dates
-
 export const Lectures = () => (
   <StaticQuery
     query={graphql`
@@ -44,11 +42,12 @@ export const Lectures = () => (
       }
     `}
     render={data => {
+      // When the graphql query has been fulfilled
+      // Find all lectures and readings
       const lectures = data.allMarkdownRemark.edges
       const readings = data.allFile.edges[0].node.childrenLectureReadingJson
 
-      console.log(readings)
-
+      // Find all readings for the passed in lecture number
       const renderReadings = num => {
         const filteredReadings = readings.filter(r => {
           console.log(r)

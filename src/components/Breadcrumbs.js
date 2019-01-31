@@ -41,7 +41,12 @@ const Home = s.div`
   display: inline-block;
   margin: 0;
   background-image: url(${home});
+  opacity: 0.8;
   ${bgStyles}
+
+  &:hover {
+    opacity: 1;
+  }
 `
 
 const Chevron = s.div`

@@ -5,7 +5,7 @@ import s from 'styled-components'
 
 import Header from '../components/Header'
 import './layout.css'
-import { BORDER } from '../constants/colors'
+import { BORDER, LIGHT_GRAY } from '../constants/colors'
 import Breadcrumbs from '../components/Breadcrumbs'
 
 // TODO mobile responsiveness
@@ -32,6 +32,12 @@ const Content = s.div`
 
   pre {
     max-width: 100%;
+  }
+
+  tbody tr {
+    :hover {
+      background: ${LIGHT_GRAY};
+    }
   }
 `
 
