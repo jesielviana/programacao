@@ -26,10 +26,45 @@ export const Lectures = () => (
             }
           }
         }
+
+        allFile(filter: {
+          name: { eq: "lectureReading" }
+          sourceInstanceName: { eq : "json" }
+        }) {
+          edges {
+            node {
+              childrenLectureReadingJson {
+                url
+                name
+                lecture
+              }
+            }
+          }
+        }
       }
     `}
     render={data => {
       const lectures = data.allMarkdownRemark.edges
+      const readings = data.allFile.edges[0].node.childrenLectureReadingJson
+
+      console.log(readings)
+
+      const renderReadings = num => {
+        const filteredReadings = readings.filter(r => {
+          console.log(r)
+          return r.lecture === num
+        })
+
+        if (!filteredReadings || !filteredReadings.length) {
+          return null
+        }
+
+        return filteredReadings.map(({ name, url }) => (
+          <div key={url}>
+            <a href={url}>{name}</a>
+          </div>
+        ))
+      }
 
       return (
         <>
@@ -38,6 +73,7 @@ export const Lectures = () => (
               <tr>
                 <th>#</th>
                 <th>Name</th>
+                <th>{'Reading & Resources'}</th>
               </tr>
             </thead>
 
@@ -62,6 +98,7 @@ export const Lectures = () => (
                   <tr key={path}>
                     <td>{number}</td>
                     <td><Link to={path}>{title}</Link></td>
+                    <td>{renderReadings(number)}</td>
                   </tr>
                 )
               })}

@@ -27,7 +27,7 @@ const AdditionalReading = () => (
       }
     `}
     render={data => {
-      const reading = data.allFile.edges[0].node.childrenReadingJson
+      const reading = data.allFile.edges[0].node.childrenAdditionalReadingJson
 
       return (
         <Wrapper>

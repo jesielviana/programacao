@@ -6,6 +6,7 @@ import logo from '../../images/logo.svg'
 const Wrapper = s.img`
   width: 3rem;
   height: auto;
+  margin-top: calc(1rem + 2.5%);
   margin-bottom: 1.5rem;
 `
 
