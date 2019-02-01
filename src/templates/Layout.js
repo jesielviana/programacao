@@ -3,17 +3,20 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import s from 'styled-components'
 
-import Header from '../components/Header'
 import './layout.css'
-import { BORDER, LIGHT_GRAY } from '../constants/colors'
-import Breadcrumbs from '../components/Breadcrumbs'
 
-// TODO mobile responsiveness
+import { BORDER, LIGHT_GRAY } from '../constants/colors'
+import { maxWidth, TABLET } from '../constants/widths'
+import Header from '../components/Header'
+import Breadcrumbs from '../components/Breadcrumbs'
 
 const Wrapper = s.div`
   width: 100%;
-  display: block;
   display: flex;
+
+  ${maxWidth(TABLET)} {
+    display: block;
+  }
 `
 
 const Content = s.div`
@@ -24,6 +27,10 @@ const Content = s.div`
   box-sizing: border-box;
   position: relative;
   width: 80vw;
+
+  ${maxWidth(TABLET)} {
+    width: 100%;
+  }
 
   hr {
     background: ${BORDER};

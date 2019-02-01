@@ -3,6 +3,8 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 
 import AdditionalReading from './AdditionalReading'
 
+// TODO slide decks
+
 export const Lectures = () => (
   <StaticQuery
     query={graphql`
