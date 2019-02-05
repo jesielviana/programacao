@@ -30,7 +30,7 @@ We will be interacting with our own simplified version of the New York Times API
 * Copy your API key, which is available under "API Keys"
 * Paste this API key into `api/config.js` (in your project directory) and change the string `YOUR_API_KEY_HERE` to whatever your api key ends up being. It should still look something like this
 
-```javascript
+```js
 module.exports = {
   apiKey: 'NoticeIStillHaveQuotesAroundThisString'
 }

@@ -39,6 +39,23 @@ const Content = s.div`
 
   pre {
     max-width: 100%;
+    background: ${LIGHT_GRAY} !important;
+    margin: 0;
+    margin-bottom: 1.45rem;
+  }
+
+  code {
+    background: ${LIGHT_GRAY} !important;
+    line-height: 1.45rem;
+    padding: 0.1em 0.3em !important;
+
+    ::before {
+      content: '' !important;
+    }
+
+    ::after {
+      content: '' !important;
+    }
   }
 
   tbody tr {

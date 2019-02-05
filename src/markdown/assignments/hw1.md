@@ -56,7 +56,7 @@ Obviously, this is the hard part! You'll find that the homework files themselves
 
 Of course, you'll want a way to debug your `exercises.js` functions, since they're unlikely to be perfect the first time. The best way to do this is to create a new file, `testHW1.js`, and *require* `exercises.js` from that file. This is done with a simple `require` statement, as in the example below:
 
-```js
+```javascript
 var exercises = require('./exercises');
 
 // Test the sum function
