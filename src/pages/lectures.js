@@ -4,11 +4,12 @@ import Layout from '../templates/Layout'
 import SEO from '../components/seo'
 import { Lectures } from '../fragments'
 
-// TODO SEO across the board
-
 const LecturesPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Lectures" />
+    <SEO
+      title="Lectures"
+      description="Lectures for CIS 197: JavaScript at the University of Pennsylvania"
+    />
     <h1>Lectures</h1>
 
     <Lectures />

@@ -18,6 +18,7 @@ module.exports = {
       'react',
       'learn',
     ],
+    image: `https://s3.amazonaws.com/riploventures/cis197-bg.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

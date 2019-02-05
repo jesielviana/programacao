@@ -6,7 +6,10 @@ import { Staff } from '../fragments'
 
 const StaffPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Staff" />
+    <SEO
+      title="Staff"
+      description="Course staff for CIS 197: JavaScript at the University of Pennsylvania"
+    />
     <h1>Course Staff</h1>
     <Staff />
   </Layout>
