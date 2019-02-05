@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import s from 'styled-components'
 
 import Layout from './Layout'
+import Lecture from './Lecture'
 import { GRAY } from '../constants/colors'
 
 const Timestamp = s.p`
@@ -19,6 +20,18 @@ export default function Template ({
   const { frontmatter, html } = markdownRemark
 
   const { title, date } = frontmatter
+
+  const isLecture = location.pathname.includes('lecture')
+
+  if (isLecture) {
+    return (
+      <Lecture
+        title={title}
+        date={date}
+        html={html}
+      />
+    )
+  }
 
   return (
     <Layout location={location}>
