@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 import s from 'styled-components'
 
+import { HOME_ROUTE } from '../constants/routes'
 import { GRAY } from '../constants/colors'
 import logo from '../images/logo.svg'
 
@@ -55,12 +57,20 @@ const Wrapper = s.div`
   }
 `
 
-const Logo = s.img`
+const LogoLink = s(Link)`
   position: absolute;
   width: 2rem;
   height: auto;
   top: calc(1rem + 5%);
   right: calc(1rem + 5%);
+  margin: 0;
+  padding: 0;
+
+  img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 `
 
 const Navigation = s.div`
@@ -77,7 +87,7 @@ const Navigation = s.div`
   }
 
   a {
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
 `
 
@@ -189,7 +199,9 @@ class Lecture extends Component {
 
     return (
       <>
-        <Logo src={logo} alt="CIS 197: JavaScript" />
+        <LogoLink to={HOME_ROUTE}>
+          <img src={logo} alt="CIS 197: JavaScript" />
+        </LogoLink>
         <Wrapper>
           <div
             className={className}
