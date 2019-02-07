@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import s from 'styled-components'
 
 import { GRAY } from '../constants/colors'
+import logo from '../images/logo.svg'
 
 const LEFT_KEY_CODE = 37
 const RIGHT_KEY_CODE = 39
@@ -52,6 +53,14 @@ const Wrapper = s.div`
     font-size: 120%;
     line-height: 1.15;
   }
+`
+
+const Logo = s.img`
+  position: absolute;
+  width: 2rem;
+  height: auto;
+  top: calc(1rem + 5%);
+  right: calc(1rem + 5%);
 `
 
 const Navigation = s.div`
@@ -140,7 +149,6 @@ class Lecture extends Component {
   matchStateToURL = () => {
     const { location: { hash } = { hash: '#0' } } = this.props
     const id = Number(hash.substring(1))
-    console.log(id)
 
     const { slide } = this.state
     if (slide !== id) {
@@ -181,6 +189,7 @@ class Lecture extends Component {
 
     return (
       <>
+        <Logo src={logo} alt="CIS 197: JavaScript" />
         <Wrapper>
           <div
             className={className}
