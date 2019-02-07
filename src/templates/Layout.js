@@ -42,6 +42,24 @@ const Content = s.div`
     background: ${LIGHT_GRAY} !important;
     margin: 0;
     margin-bottom: 1.45rem;
+
+    .token.operator {
+      background: ${LIGHT_GRAY} !important;
+    }
+
+    ::before {
+      content: '' !important;
+      display: none;
+    }
+
+    ::after {
+      content: '' !important;
+      display: none;
+    }
+
+    code {
+      padding: 0 !important;
+    }
   }
 
   code {
@@ -51,10 +69,12 @@ const Content = s.div`
 
     ::before {
       content: '' !important;
+      display: none;
     }
 
     ::after {
       content: '' !important;
+      display: none;
     }
   }
 
