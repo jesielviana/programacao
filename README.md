@@ -7,6 +7,17 @@
   CIS 197 Course Website
 </h1>
 
+## Todo
+
+[ ] Images in markdown (internal or external)
+[ ] Styling slides
+[ ] Slide ID navigation in slides
+[ ] Porting over scripts
+[ ] Hiding things that need to be hidden
+[ ] Documenting site architecture
+
+## Gatsby README content
+
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._

@@ -1,6 +1,7 @@
 ---
 path: "/"
 date: "2019-01-29"
+metaTitle: "JavaScript"
 title: "CIS 197: JavaScript (Spring 2019)"
 ---
 

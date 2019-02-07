@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import s from 'styled-components'
 
+import { GRAY } from '../constants/colors'
+
+const LEFT_KEY_CODE = 37
+const RIGHT_KEY_CODE = 39
+
+// TOOD mobile responsiveness
+
 const Wrapper = s.div`
   display: flex;
   height: 100vh;
@@ -50,12 +57,26 @@ const Wrapper = s.div`
 const Navigation = s.div`
   position: absolute;
   bottom: calc(1rem + 5%);
+  padding: 0 calc(1rem + 5%);
+  text-align: right;
+  width: 100%;
+
+  p {
+    display: inline-block;
+    margin: 0;
+    float: left;
+  }
 
   a {
     margin-right: 1rem;
   }
 `
 
+const SlideCount = s.p`
+  color: ${GRAY};
+`
+
+// TODO document
 const parseClass = str => {
   const re = /^<p>class:.*?<\/p>/
 
@@ -79,8 +100,6 @@ const parseClass = str => {
   }
 }
 
-// TODO change ID in URL
-
 class Lecture extends Component {
   constructor (props) {
     super(props)
@@ -90,7 +109,44 @@ class Lecture extends Component {
 
     this.state = {
       slide: 0,
+      displaySlide: 0,
       slides,
+      hidden: false,
+    }
+  }
+
+  componentDidMount () {
+    this.matchStateToURL()
+
+    document.onkeydown = event => {
+      if (!event) return
+
+      const { keyCode } = event
+
+      console.log(this)
+
+      if (keyCode === LEFT_KEY_CODE) {
+        this.prev()
+      } else if (keyCode === RIGHT_KEY_CODE) {
+        this.next()
+      }
+    }
+  }
+
+  componentDidUpdate () {
+    this.matchStateToURL()
+  }
+
+  matchStateToURL = () => {
+    const { location: { hash } = { hash: '#0' } } = this.props
+    const id = Number(hash.substring(1))
+    console.log(id)
+
+    const { slide } = this.state
+    if (slide !== id) {
+      this.setState({
+        slide: id,
+      })
     }
   }
 
@@ -107,39 +163,46 @@ class Lecture extends Component {
   next = () => {
     const { slide } = this.state
     if (!this.nextValid()) return
-    this.setState({ slide: slide + 1 })
+    window.location.hash = slide + 1
   }
 
   prev = () => {
     const { slide } = this.state
     if (!this.prevValid()) return
-    this.setState({ slide: slide - 1 })
+    window.location.hash = slide - 1
   }
 
   render () {
     const { slides, slide } = this.state
     const html = slides[slide]
+    const numSlides = slides.length
 
     const { className, content } = parseClass(html)
 
     return (
-      <Wrapper>
-        <div>
-          <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
-          <Navigation>
-            {this.prevValid() && (
-              <a onClick={this.prev}>
-                Prev
-              </a>
-            )}
-            {this.nextValid() && (
-              <a onClick={this.next}>
-                Next
-              </a>
-            )}
-          </Navigation>
-        </div>
-      </Wrapper>
+      <>
+        <Wrapper>
+          <div
+            className={className}
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+        </Wrapper>
+        <Navigation>
+          <SlideCount>
+            {slide}/{numSlides - 1}
+          </SlideCount>
+          {this.prevValid() && (
+            <a onClick={this.prev}>
+              Prev
+            </a>
+          )}
+          {this.nextValid() && (
+            <a onClick={this.next}>
+              Next
+            </a>
+          )}
+        </Navigation>
+      </>
     )
   }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import s from 'styled-components'
 
+import SEO from '../components/seo'
 import Layout from './Layout'
 import Lecture from './Lecture'
 import { GRAY } from '../constants/colors'
@@ -19,22 +20,27 @@ export default function Template ({
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
 
-  const { title, date } = frontmatter
+  const { title, date, metaTitle } = frontmatter
 
   const isLecture = location.pathname.includes('lecture')
 
   if (isLecture) {
     return (
-      <Lecture
-        title={title}
-        date={date}
-        html={html}
-      />
+      <>
+        <SEO title={metaTitle || title} />
+        <Lecture
+          location={location}
+          title={title}
+          date={date}
+          html={html}
+        />
+      </>
     )
   }
 
   return (
     <Layout location={location}>
+      <SEO title={metaTitle || title} />
       <h1>{title}</h1>
       {date && (<Timestamp>Last updated: {date}</Timestamp>)}
       <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -50,6 +56,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        metaTitle
       }
     }
   }
