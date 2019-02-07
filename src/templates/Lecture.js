@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import s from 'styled-components'
 
+import sharedStyles from './sharedStyles'
 import { HOME_ROUTE } from '../constants/routes'
 import { GRAY } from '../constants/colors'
 import logo from '../images/logo.svg'
@@ -12,10 +13,24 @@ const RIGHT_KEY_CODE = 39
 // TOOD mobile responsiveness
 
 const Wrapper = s.div`
+  ${sharedStyles}
+
   display: flex;
   height: 100vh;
   width: 100vw;
   padding: calc(1rem + 5%) calc(1rem + 20%);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    code {
+      font-size: inherit;
+      font-size: 80%;
+    }
+  }
 
   p {
     line-height: 1.15;
@@ -95,7 +110,8 @@ const SlideCount = s.p`
   color: ${GRAY};
 `
 
-// TODO document
+// TODO document this
+
 const parseClass = str => {
   const re = /^<p>class:.*?<\/p>/
 

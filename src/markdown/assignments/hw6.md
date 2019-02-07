@@ -2,6 +2,7 @@
 path: "/assignments/6"
 date: "2019-01-29"
 title: "Homework 6: Piazza Lite Part 2"
+hidden: true
 ---
 
 **Due Date 10/24/18 11:59 PM**

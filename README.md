@@ -10,8 +10,8 @@
 ## Todo
 
 [ ] Images in markdown (internal or external)
-[ ] Styling slides
-[ ] Slide ID navigation in slides
+[x] Styling slides
+[x] Slide ID navigation in slides
 [ ] Porting over scripts
 [ ] Hiding things that need to be hidden
 [ ] Documenting site architecture

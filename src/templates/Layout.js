@@ -5,10 +5,10 @@ import s from 'styled-components'
 
 import './layout.css'
 
-import { BORDER, LIGHT_GRAY } from '../constants/colors'
 import { maxWidth, TABLET } from '../constants/widths'
 import Header from '../components/Header'
 import Breadcrumbs from '../components/Breadcrumbs'
+import sharedStyles from './sharedStyles'
 
 const Wrapper = s.div`
   width: 100%;
@@ -32,57 +32,7 @@ const Content = s.div`
     width: 100%;
   }
 
-  hr {
-    background: ${BORDER};
-    height: 3px;
-  }
-
-  pre {
-    max-width: 100%;
-    background: ${LIGHT_GRAY} !important;
-    margin: 0;
-    margin-bottom: 1.45rem;
-
-    .token.operator {
-      background: ${LIGHT_GRAY} !important;
-    }
-
-    ::before {
-      content: '' !important;
-      display: none;
-    }
-
-    ::after {
-      content: '' !important;
-      display: none;
-    }
-
-    code {
-      padding: 0 !important;
-    }
-  }
-
-  code {
-    background: ${LIGHT_GRAY} !important;
-    line-height: 1.45rem;
-    padding: 0.1em 0.3em !important;
-
-    ::before {
-      content: '' !important;
-      display: none;
-    }
-
-    ::after {
-      content: '' !important;
-      display: none;
-    }
-  }
-
-  tbody tr {
-    :hover {
-      background: ${LIGHT_GRAY};
-    }
-  }
+  ${sharedStyles}
 `
 
 const Layout = ({ children, location }) => (

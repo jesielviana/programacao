@@ -16,6 +16,7 @@ export const Assignments = () => (
               frontmatter {
                 path
                 title
+                hidden
                 due(formatString: "MMMM DD, YYYY")
               }
             }
@@ -44,9 +45,14 @@ export const Assignments = () => (
                     title,
                     path,
                     due,
+                    hidden,
                   }
                 }
               } = a
+
+              if (hidden) {
+                return null
+              }
 
               return (
                 <tr key={path}>

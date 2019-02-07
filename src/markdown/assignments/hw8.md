@@ -2,6 +2,7 @@
 path: "/assignments/8"
 date: "2019-01-29"
 title: "Homework 8: Reddit AMA Chrome Extension"
+hidden: true
 ---
 
 Due **Sunday, November 12th, 11:59:59pm.**

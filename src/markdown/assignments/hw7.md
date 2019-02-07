@@ -2,6 +2,7 @@
 path: "/assignments/7"
 date: "2019-01-29"
 title: "Homework 7: Conway's Game of Life"
+hidden: true
 ---
 
 Due **Tuesday, November 13, 11:59:59pm.**

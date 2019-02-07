@@ -2,6 +2,7 @@
 path: "/assignments/4"
 date: "2019-01-29"
 title: "Homework 4: Pokémon Map Builder"
+hidden: true
 ---
 
 Due **Thursday, October 4th, 11:59:59pm**.
