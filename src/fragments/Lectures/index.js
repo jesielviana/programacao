@@ -73,8 +73,8 @@ export const Lectures = () => (
             <thead>
               <tr>
                 <th>#</th>
-                <th>Name</th>
-                <th>{'Reading & Resources'}</th>
+                <th>Assunto</th>
+                <th>{'Leitura Recomendada'}</th>
               </tr>
             </thead>
 

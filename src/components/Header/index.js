@@ -5,7 +5,7 @@ import s from 'styled-components'
 
 import { BORDER, BLACK, WHITE } from '../../constants/colors'
 import { maxWidth, TABLET } from '../../constants/widths'
-import Logo from './Logo'
+// import Logo from './Logo'
 import Links from './Links'
 import Footer from './Footer'
 import Bars from './Bars'
@@ -84,7 +84,7 @@ class Header extends Component {
     return (
       <>
         <Nav active={active}>
-          <Logo />
+          {/* <Logo /> */}
 
           <Bars handleClick={this.toggle} />
 
@@ -108,7 +108,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `Programação para Internet I`,
 }
 
 export default Header

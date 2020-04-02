@@ -31,7 +31,7 @@ const Footer = s.footer`
 export default ({ active }) => (
   <Wrapper active={active}>
     <Footer>
-      CIS 197 Staff &copy; {new Date().getFullYear()}
+      Prof. Jesiel Viana &copy; {new Date().getFullYear()}
     </Footer>
   </Wrapper>
 )

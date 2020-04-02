@@ -10,7 +10,7 @@ const LecturesPage = ({ location }) => (
       title="Lectures"
       description="Lectures for CIS 197: JavaScript at the University of Pennsylvania"
     />
-    <h1>Lectures</h1>
+    <h1>Aulas</h1>
 
     <Lectures />
   </Layout>

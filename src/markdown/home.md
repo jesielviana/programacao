@@ -1,8 +1,8 @@
 ---
 path: "/"
 date: "2019-01-29"
-metaTitle: "JavaScript"
-title: "CIS 197: JavaScript (Spring 2019)"
+metaTitle: "ADS 2020.1"
+title: "Programação para Internet I"
 ---
 
 ### Course Description
