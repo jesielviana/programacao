@@ -6,3 +6,4 @@ export const STAFF_ROUTE = '/staff'
 
 // External routes
 export const PIAZZA_ROUTE = 'https://piazza.com/class/jr6qcpostx35b8'
+export const POWER_BY_ROUTE = 'https://github.com/cacabo'
