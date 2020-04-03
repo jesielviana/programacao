@@ -1,25 +1,17 @@
 <!doctype html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 	<title>Programação para Internet I</title>
-
+ <!-- css base theme -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/white.css" id="theme">
-	<!-- background colors 
-			data-background="#4d7e65" 
-			data-background="#b5533c"
-		-->
-
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/atom-one-light.css" id="code-theme">
-
+	<!-- custom css by @jesielviana  -->
 	<link rel="stylesheet" href="css/custom.css">
-
 	<!-- Printing and PDF exports -->
 	<script>
 		var link = document.createElement('link');
@@ -37,14 +29,38 @@
 		</button>
 		<div class="slides">
 			<section>
-				<h2>Programação para Internet I</h2>
-				<h4 class="opacity60">Apresentação do Plano de Disciplina</h4>
+				<h1>Programação para Internet I</h1>
+				<h3 class="opacity60">Apresentação do Plano de Disciplina</h3>
 				<p>
-					<small><a href="https://jesielviana.github.io/">Prof. Jesiel Viana</a></small>
+					<a href="https://jesielviana.github.io/">Prof. Jesiel Viana</a>
 				</p>
 			</section>
-			<section>Lectures</section>
-			<section>JavaScript</section>
+			
+			<section data-markdown>
+				## Apresentação
+				- Professor [@jesielviana](jesielviana.github.io)
+				- Alunos
+					- Nome
+					- TADS?
+					- Gosta de programar?
+					- O que você sabe sobre Web?
+					- Qual meio você mais utiliza para estudar?
+			</section>
+			<section data-markdown>
+				## Objetivo do curso
+				Capacitar o aluno para desenvolver e implementar paginas Web, sites e 
+				portais com utilização de páginas estáticas e dinâmicas, 
+				bem como interfaces de aplicações.
+			</section>
+			<section data-markdown>
+				## Conteúdo Programático
+				1. Introdução aos conceitos de Internet. 
+				1. Linguagens de Marcação. 
+				1. Fundamentos de folhas de estilo. 
+				1. Princípios de Design responsivo. 
+				1. Princípios de Javascript e suas principais bibliotecas. 
+				1. Conceitos Básicos sobre Aplicações Cliente/Servidor.
+			</section>
 			<section>
 				<h2>JavaScript</h2>
 				<p>
@@ -79,7 +95,7 @@ function teste(){
 function teste(){
 	const objeto = {nome: 'Jesiel', idade: 30}
 }
-					</code></pre>
+			</code></pre>
 			</section>
 			<section>
 				<h2>Programação para Internet I</h2>
@@ -91,35 +107,7 @@ function teste(){
 			</section>
 		</div>
 	</div>
-
 	<script src="js/reveal.js"></script>
-
-	<script>
-		Reveal.initialize({
-			hash: true,
-			slideNumber: true,
-			dependencies: [
-				{ src: 'plugin/markdown/marked.js' },
-				{ src: 'plugin/markdown/markdown.js' },
-				{ src: 'plugin/highlight/highlight.js' },
-				{ src: 'plugin/notes/notes.js', async: true }
-			]
-		});
-		Reveal.configure({ slideNumber: 'c/t' });
-	</script>
+	<script src="js/main.js"></script>
 </body>
-<script>
-	let theme = 'light';
-	function changeTheme(){
-		if(theme === 'light'){
-			document.getElementById('theme').setAttribute('href','css/theme/black.css');
-			document.getElementById('code-theme').setAttribute('href','lib/css/atom-one-dark.css');
-			theme = 'dark'
-		}else{
-			document.getElementById('theme').setAttribute('href','css/theme/white.css');
-			document.getElementById('code-theme').setAttribute('href','lib/css/atom-one-light.css');
-			theme = 'light';
-		}
-	}
-</script>
 </html>
