@@ -29,7 +29,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build --prefix-paths",
+    "copy-slides": "cp -rf slides public/slides",
+    "build": "gatsby build --prefix-paths && npm run copy-slides",
     "develop": "gatsby develop --prefix-paths",
     "dev": "yarn develop",
     "start": "npm run develop",
