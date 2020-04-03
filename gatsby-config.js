@@ -104,20 +104,20 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/slides`,
-        plugins: [
-          {
-            resolve: 'gatsby-plugin-copy-files',
-            options: {
-              source: `${__dirname}/src/slides`,
-              destination: '/slides',
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/src/slides`,
+    //     plugins: [
+    //       {
+    //         resolve: 'gatsby-plugin-copy-files',
+    //         options: {
+    //           source: `${__dirname}/src/slides`,
+    //           destination: '/slides',
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 }

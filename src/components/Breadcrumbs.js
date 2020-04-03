@@ -79,7 +79,6 @@ export default ({ location }) => {
 
       {paths.map((path, idx) => {
         absPath += `/${path}`
-
         return (
           <span key={absPath}>
             <Chevron />
