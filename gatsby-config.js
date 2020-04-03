@@ -3,7 +3,6 @@ module.exports = {
     title: `TADS 2020`,
     description: `Student-taught 19X course on JavaScript web development at the University of Pennsylvania.`, // eslint-disable-line
     author: `Cameron Cabo <ccabo@seas.upenn.edu>`,
-    urlBase: '/programacao-para-internet-i/',
     keywords: [
       'javascript',
       'js',
@@ -21,6 +20,7 @@ module.exports = {
     ],
     image: `https://s3.amazonaws.com/riploventures/cis197-bg.png`
   },
+  pathPrefix: `/programacao-para-internet-i`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
