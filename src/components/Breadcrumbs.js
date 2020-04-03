@@ -68,6 +68,7 @@ export default ({ location }) => {
 
   const { pathname } = location
   const paths = pathname.split('/').filter(path => path !== '')
+  paths.shift();
 
   let absPath = ''
 
