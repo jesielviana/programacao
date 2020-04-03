@@ -104,9 +104,20 @@ module.exports = {
         ],
       },
     },
-
-    // Optional plugin that enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/slides`,
+        plugins: [
+          {
+            resolve: 'gatsby-plugin-copy-files',
+            options: {
+              source: `${__dirname}/src/slides`,
+              destination: '/slides',
+            },
+          },
+        ],
+      },
+    },
   ],
 }
