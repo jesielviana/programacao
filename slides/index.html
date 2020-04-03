@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Programação para Internet I</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
+	<!-- background colors 
+			data-background="#4d7e65" 
+			data-background="#b5533c"
+		-->
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/atom-one-light.css" id="code-theme">
+
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<button class="change-theme" onclick="changeTheme()">
+			<img src="img/adjust-solid.svg" alt="">
+		</button>
+		<div class="slides">
+			<section>
+				<h2>Programação para Internet I</h2>
+				<h4 class="opacity60">Apresentação do Plano de Disciplina</h4>
+				<p>
+					<small><a href="https://jesielviana.github.io/">Prof. Jesiel Viana</a></small>
+				</p>
+			</section>
+			<section>Lectures</section>
+			<section>JavaScript</section>
+			<section>
+				<h2>JavaScript</h2>
+				<p>
+					reveal.js enables you to create beautiful interactive slide decks
+					using HTML. This presentation will show
+					you examples of what it can do.
+				</p>
+			</section>
+			<section id="fragments">
+				<h2>Lectures</h2>
+				<p>Hit the next arrow...</p>
+				<p class="fragment">... to step through ...</p>
+				<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span
+						class="fragment">slide.</span></p>
+
+				<aside class="notes">
+					This slide has fragments which are also stepped through in the notes window.
+				</aside>
+			</section>
+			<section>
+				<h2>Pretty Code</h2>
+				<pre><code class="hljs" data-trim data-line-numbers="4|9|4,8-11">
+function teste(){
+	const objeto = {nome: 'Jesiel', idade: 30}
+}
+function teste(){
+	const objeto = {nome: 'Jesiel', idade: 30}
+}
+function teste(){
+	const objeto = {nome: 'Jesiel', idade: 30}
+}
+function teste(){
+	const objeto = {nome: 'Jesiel', idade: 30}
+}
+					</code></pre>
+			</section>
+			<section>
+				<h2>Programação para Internet I</h2>
+				<h4 class="opacity60">Apresentação do Plano de Disciplina</h4>
+				<p>
+					<small><a href="https://jesielviana.github.io/">Prof. Jesiel Viana</a></small>
+				</p>
+				<h1>Fim!</h1>
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		Reveal.initialize({
+			hash: true,
+			slideNumber: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/highlight/highlight.js' },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+		Reveal.configure({ slideNumber: 'c/t' });
+	</script>
+</body>
+<script>
+	let theme = 'light';
+	function changeTheme(){
+		if(theme === 'light'){
+			document.getElementById('theme').setAttribute('href','css/theme/black.css');
+			document.getElementById('code-theme').setAttribute('href','lib/css/atom-one-dark.css');
+			theme = 'dark'
+		}else{
+			document.getElementById('theme').setAttribute('href','css/theme/white.css');
+			document.getElementById('code-theme').setAttribute('href','lib/css/atom-one-light.css');
+			theme = 'light';
+		}
+	}
+</script>
+</html>
