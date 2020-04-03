@@ -1,8 +1,8 @@
 ---
 number: 0
-path: "/slides/apresentacao.html"
+path: "/lectures/0"
 date: "2019-01-29"
-title: "Apresentação"
+title: "Course Policies"
 ---
 
 class: center, middle, block-text

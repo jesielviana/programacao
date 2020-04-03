@@ -7,8 +7,8 @@ import { Lectures } from '../fragments'
 const LecturesPage = ({ location }) => (
   <Layout location={location}>
     <SEO
-      title="Lectures"
-      description="Lectures for CIS 197: JavaScript at the University of Pennsylvania"
+      title="Aulas"
+      description="Aulas da disciplina de Programação para Internet I"
     />
     <h1>Aulas</h1>
 
