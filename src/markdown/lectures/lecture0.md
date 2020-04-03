@@ -3,6 +3,7 @@ number: 0
 path: "/lectures/0"
 date: "2019-01-29"
 title: "Course Policies"
+externalPath: "/slides/apresentacao.html"
 ---
 
 class: center, middle, block-text

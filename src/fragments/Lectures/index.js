@@ -22,6 +22,7 @@ export const Lectures = () => (
                 number
                 hidden
                 title
+                externalPath
               }
             }
           }
@@ -52,7 +53,6 @@ export const Lectures = () => (
       // Find all readings for the passed in lecture number
       const renderReadings = num => {
         const filteredReadings = readings.filter(r => {
-          console.log(r)
           return r.lecture === num
         })
 
@@ -80,12 +80,14 @@ export const Lectures = () => (
 
             <tbody>
               {lectures.map(l => {
+                console.log(l)
                 const {
                   node: {
                     frontmatter: {
                       title,
                       path,
                       number,
+                      externalPath,
                       hidden
                     }
                   }
@@ -98,7 +100,7 @@ export const Lectures = () => (
                 return (
                   <tr key={path}>
                     <td>{number}</td>
-                    <td><Link to={path}>{title}</Link></td>
+                    <td><Link to={externalPath != null ? externalPath : path}>{title}</Link></td>
                     <td>{renderReadings(number)}</td>
                   </tr>
                 )
